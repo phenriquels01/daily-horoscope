@@ -29,7 +29,3 @@ The goal of this project is to create a horoscope web application using NodeJS, 
 
 - **Chosen API:** [Horoscope API](https://aztro.readthedocs.io/en/latest/)
 - The website fetches daily horoscope predictions based on the user's selected zodiac sign.
-
-### Credits
-
-This project is a part of the [The Complete 2024 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/) by Angela Yu.
