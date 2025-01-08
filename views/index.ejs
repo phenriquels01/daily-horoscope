@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>✨ Daily Horoscope</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rye&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1 class="h1_home">Daily Horoscope</h1>
+  <div class="container_p">
+    <p class="paragraph"> <strong>Welcome to Your Daily Horoscope Website!</strong> Discover the secrets the stars hold for you today. Explore the cosmic insights tailored to your zodiac sign and embrace the wisdom of the universe.
+    Simply select your sign from the dropdown menu below and click "Submit" to unveil your personalized daily horoscope.
+    Whether you’re looking for guidance, inspiration, or just a touch of celestial magic, you’re in the right place. Let’s see what the universe has in store for you today!
+    🌟 <strong>Your journey begins here.</strong> 🌟</p>
+  </div>
+  <form id="signForm">
+    <label for="signs">Select Your Sign:</label>
+    <select id="signs" name="sign">
+      <option value="aries">Aries</option>
+      <option value="taurus">Taurus</option>
+      <option value="gemini">Gemini</option>
+      <option value="cancer">Cancer</option>
+      <option value="leo">Leo</option>
+      <option value="virgo">Virgo</option>
+      <option value="libra">Libra</option>
+      <option value="scorpio">Escorpio</option>
+      <option value="sagittarius">Sagittarius</option>
+      <option value="capricorn">Capricorn</option>
+      <option value="aquarius">Aquarius</option>
+      <option value="pisces">Pisces</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+  <%- include('partials/footer') %> 
+  <script>
+    document.getElementById("signForm").onsubmit = function(e) {
+      e.preventDefault();
+      
+      var selectedSign = document.getElementById("signs").value;
+  
+      window.location.href = `/${selectedSign}`;
+    };
+    function date() {
+    return new Date().getFullYear();
+    }
+    window.onload = function() {
+        const copyrightSpan = document.querySelector('.me-5 span');
+        copyrightSpan.innerHTML = `© ${date()} Pedro Siqueira. All rights reserved.`;
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'Vigran Maroll Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Vigran Maroll Regular'), url('fonts/VigranMaroll-2OzWK.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Quillen Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Quillen Regular'), url('fonts/Quillen-K7qay.woff') format('woff');
+  }
+
+  :root {
+    --card-height: 675px;
+    --card-width: 450px;
+  }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#0A1D56, #A12568, #FFBD69);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.h1_home {
+  color: #FFBD69;
+  font-family: 'Vigran Maroll Regular';
+  margin-bottom: 40px;
+  font-size: 5em;
+}
+
+.h1_spage {
+  color: #FFBD69;
+  font-family: 'Vigran Maroll Regular';
+  margin-bottom: 40px;
+  font-size: 5em;
+}
+
+.card {
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  font-family: "Libre Baskerville", serif;
+  transition: filter 0.5s ease-in-out;
+  overflow: hidden;
+  border-radius: 5%;
+  box-sizing: border-box;
+  max-width: 100%; 
+  max-height: 100%;
+}
+
+.card .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: none;
+  transition: filter 0.5s ease-in-out;
+  z-index: -1;
+  width: 100%;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  color: #FEC260;
+  font-size: 1.1em;
+  font-family: 'Quillen Regular';
+  font-style: normal;
+  font-weight: normal;
+  text-align: justify;
+  width: 85%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+} 
+
+.card:hover .text {
+  opacity: 1;
+  color:  rgb(100, 13, 95 / 100%);
+}
+
+.card:hover .image {
+  filter: blur(5px);
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #3B185F,
+    #A12568 43%,
+    #FEC260
+  );
+  position: absolute;
+  z-index: -2;
+  top: -1%;
+  left: -2%;
+  animation: spin 6s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #3B185F,
+    #A12568 43%,
+    #FEC260
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 6s linear infinite;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.user {
+  color: white;
+  font-size: 24px;
+  font-family: "Titan One", cursive;
+}
+
+footer {
+  color: #000000;
+  font-family: 'Quillen Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  text-align: justify;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  margin-top: 165px;
+}
+
+.container_p {
+  width: 90%;
+  justify-content: center;
+}
+
+.paragraph {
+  color: #F7E6B5;
+  font-family: 'Quillen Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8em;
+  text-align: justify;
+  margin-bottom: 50px;
+}
+
+#signForm {
+  color: #F7E6B5;
+  font-family: 'Quillen Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8em;
+  text-align: justify;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+#signForm button[type="submit"] {
+  color: #F7E6B5;
+  font-family: 'Quillen Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.05em;
+  padding: 12px;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+
+#signForm button[type="submit"]:hover {
+  background-color: #0A1D56;
+}
+
+#signForm select {
+  color: #F7E6B5;
+  font-family: 'Quillen Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.05em;
+  padding: 12px;
+  background-color: #0A1D56;
+  border: 1px transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#signForm select:focus {
+  border-color: #0A1D56;
+  outline: none;
+  background-color: #0A1D56;
+}
+
+@media (max-width: 1157px) {
+  .h1_spage {
+    font-size: 4em;
+    text-align: center;
+  }
+}
+@media (max-width: 666px) {
+  .h1_home {
+    font-size: 4em;
+    text-align: center;
+  }
+}
