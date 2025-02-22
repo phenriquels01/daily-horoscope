@@ -1,10 +1,10 @@
 # Horoscope Website
 
-## Project Description
+## 🎯 Project Description
 
 The goal of this project is to create a horoscope web application using NodeJS, ExpressJS, Axios, and EJS. The application retrieves and displays horoscope predictions based on the user's selected zodiac sign by integrating a public horoscope API. It is designed to provide a seamless and user-friendly experience.
 
-## Deliverables
+## 📦 Deliverables
 
 - A Node.js project for the server-side functionality of the website.
 - EJS files for dynamic page rendering.
@@ -25,7 +25,42 @@ The goal of this project is to create a horoscope web application using NodeJS, 
 3. **Axios:** Handles HTTP requests to fetch data from the public API.
 4. **CSS and Flexbox:** Used for styling and layout.
 
-## API Integration
+## 🔗 API Integration
 
-- **Chosen API:** [Horoscope API](https://aztro.readthedocs.io/en/latest/)
+- **Chosen API:** [Aztro API](https://aztro.readthedocs.io/en/latest/)
 - The website fetches daily horoscope predictions based on the user's selected zodiac sign.
+
+## ⚙️ Environment Configuration
+
+### 1. Clone or Download this Repository
+
+   ```bash
+   git clone https://github.com/phenriquels01/daily-horoscope.git
+   cd daily-horoscope
+   ```
+
+### 2. Install Dependencies
+
+In the project root, execute:
+
+```bash
+npm install
+```
+
+*Development tip:*
+
+```bash
+npm install -g nodemon
+```
+
+### 3. Run the Application
+
+Start the server:
+
+```bash
+nodemon index.js
+```
+or
+
+```bash
+node index.js
