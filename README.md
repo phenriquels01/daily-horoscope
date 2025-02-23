@@ -18,7 +18,7 @@ The goal of this project is to create a horoscope web application using NodeJS, 
 3. **Dynamic Routing:** Each zodiac sign redirects to its own detailed prediction page.
 4. **Styling and Responsiveness:** The app is designed to be visually appealing and functional across desktop and mobile devices.
 
-## 🛠️ Technical Requirements
+## 🛠️ Technologies Used
 
 1. **NodeJS and ExpressJS:** The backend is built using Node.js and Express.js for routing and middleware.
 2. **EJS Templating:** Used to dynamically render pages based on the selected zodiac sign.
