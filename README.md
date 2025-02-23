@@ -60,7 +60,12 @@ Start the server:
 ```bash
 nodemon index.js
 ```
+### 3. Run the Application
+
 or
 
 ```bash
 node index.js
+```
+
+Once the server is running, open your browser and go to: *http://localhost:3000*
