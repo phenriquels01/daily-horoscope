@@ -27,7 +27,7 @@ The goal of this project is to create a horoscope web application using NodeJS, 
 
 ## 🔗 API Integration
 
-- **Chosen API:** [Aztro API](https://aztro.readthedocs.io/en/latest/)
+- **Chosen API:** [Horoscope API](https://horoscope-app-api.vercel.app/)
 - The website fetches daily horoscope predictions based on the user's selected zodiac sign.
 
 ## ⚙️ Environment Configuration
